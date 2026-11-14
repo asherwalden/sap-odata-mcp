@@ -1,0 +1,40 @@
+{
+  "name": "sap-odata-mcp",
+  "version": "0.1.0",
+  "description": "An MCP server that lets AI assistants explore and query SAP S/4HANA OData services in plain English.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "sap-odata-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "sap",
+    "odata",
+    "s4hana",
+    "ai",
+    "claude"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.9.0",
+    "vitest": "^5.1.0"
+  }
+}
